@@ -44,10 +44,6 @@ require 'spreadsheet/excel/rgb'
 module Spreadsheet
 
   ##
-  # The version of Spreadsheet you are using.
-  VERSION = '1.1.0'
-
-  ##
   # Default client Encoding. Change this value if your application uses a
   # different Encoding:
   # Spreadsheet.client_encoding = 'ISO-LATIN-1//TRANSLIT//IGNORE'

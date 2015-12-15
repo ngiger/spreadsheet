@@ -1,11 +1,29 @@
+PATH
+  remote: .
+  specs:
+    spreadsheet (1.1.1)
+      ruby-ole (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    hoe (3.14.2)
-      rake (>= 0.8, < 11.0)
-    minitest (5.8.2)
-    power_assert (0.2.4)
+    diff-lcs (1.2.5)
+    minitest (5.8.3)
+    power_assert (0.2.6)
     rake (10.4.2)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     ruby-ole (1.2.11.8)
     test-unit (3.1.5)
       power_assert
@@ -14,9 +32,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  hoe (>= 3.4)
+  bundler (~> 1.10)
   minitest
-  ruby-ole
+  rake (~> 10.0)
+  rspec
+  spreadsheet!
   test-unit
 
 BUNDLED WITH
