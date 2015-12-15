@@ -1,3 +1,10 @@
+### 1.1.1 / not yet released
+
+* Remove no longer used Manifest.txt and bin/xlsopcodes
+* Fixed some warnings when running rake test
+* Added rake task test
+* Removed hoe, updated Rakefile, gemspec etc to state of art of Ruby gem
+
 ### 1.1.0 / 08.12.2015
 
 Author: Matthew Boeh <matt@crowdcompass.com>
