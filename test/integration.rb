@@ -70,7 +70,7 @@ module Spreadsheet
     def test_missing_format
       path = File.join @data, 'test_missing_format.xls'
       assert_nothing_thrown do
-        workbook = Spreadsheet.open(path, "rb")
+        Spreadsheet.open(path, "rb")
       end
     end
     def test_version_excel97__excel2010__utf16
@@ -1391,10 +1391,8 @@ module Spreadsheet
       path = File.join @var, 'test_write_worksheet_visibility.xls'
       sheet1 = book.create_worksheet
       sheet1.visibility = :hidden
-      sheet2 = book.create_worksheet
-      assert_nothing_raised do
-        book.write path
-      end
+      book.create_worksheet
+      book.write path
       book2 = Spreadsheet.open path
       assert_instance_of Excel::Workbook, book2
       assert_equal(:hidden, book2.worksheet(0).visibility)

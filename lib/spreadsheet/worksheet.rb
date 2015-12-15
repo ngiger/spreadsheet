@@ -342,17 +342,17 @@ module Spreadsheet
 
       # detect first non-empty non-nil column if first column is empty or nil
       if (@dimensions[0]..@dimensions[1]).inject(true){|t, j| t && row(j)[@dimensions[2]].nil?}
-        (@dimensions[2]..@dimensions[3]).each do |i|
-          break unless (@dimensions[0]..@dimensions[1]).inject(true){|t, j| t && (row(j)[i].nil? || row(j)[i].empty?)}
-          @dimensions[2] = i
+        (@dimensions[2]..@dimensions[3]).each do |idx|
+          break unless (@dimensions[0]..@dimensions[1]).inject(true){|t, j| t && (row(j)[idx].nil? || row(j)[idx].empty?)}
+          @dimensions[2] = idx
         end
       end
 
       # detect last non-empty non-nil column if last column is empty or nil
       if (@dimensions[0]..@dimensions[1]).inject(true){|t, j| t && row(j)[@dimensions[3]].nil?}
-        (@dimensions[2]..@dimensions[3]).reverse_each do |i|
-          break unless (@dimensions[0]..@dimensions[1]).inject(true){|t, j| t && (row(j)[i].nil? || row(j)[i].empty?)}
-          @dimensions[3] = i
+        (@dimensions[2]..@dimensions[3]).reverse_each do |idx|
+          break unless (@dimensions[0]..@dimensions[1]).inject(true){|t, j| t && (row(j)[idx].nil? || row(j)[idx].empty?)}
+          @dimensions[3] = idx
         end
         @dimensions[3] = @dimensions[3]
       end

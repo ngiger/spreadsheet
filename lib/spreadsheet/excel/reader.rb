@@ -909,6 +909,7 @@ class Reader
           #p work
         end
       when :continue # this contains the actual note text
+        @noteObject ||= nil
         if previous == :txo && @noteObject
           #puts "\nDEBUG: found Continue record"
           continueFmt = work.unpack('C')
