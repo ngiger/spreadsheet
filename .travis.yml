@@ -4,7 +4,7 @@ cache: bundler
 before_install:
   - gem install bundler
 bundler_args: --binstubs
-script: "bundle exec ruby test/suite.rb"
+script: "bundle exec rake test"
 rvm:
   - ruby-head
   - 2.0.0

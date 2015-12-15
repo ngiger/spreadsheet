@@ -3,12 +3,16 @@
 require 'rubygems'
 require 'bundler'
 require 'find'
+require 'simplecov'
+SimpleCov.start do
+  add_filter "/test/"
+end
 
 $VERBOSE = true
 
 here = File.dirname(__FILE__)
 
-$: << here
+$LOAD_PATH << here
 
 Find.find(here) do |file|
   next if File.basename(file) == 'suite.rb'

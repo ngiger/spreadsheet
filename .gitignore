@@ -1,2 +1,7 @@
 tags
 *.swp
+coverage
+pkg
+.bundle
+.ruby-version
+
